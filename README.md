@@ -34,14 +34,18 @@ Follow the following link for instructions on installation of git in your system
 	* f. Ready to send your work to the online repo?
 
 Yes  but then not everything inside my directory is to be send. Then, fire up git bash and ignore this files
+
 	```bash
 		touch .gitignore # do this in your project repository	
 	```
+
 You will find this file '.gitignore' in your project repository. Edit it using any editor you like. If you don't want to send a certain directoty online the add the directory name to the  '.gitignore' file as follows
+
 	```bash
 	sda_hymns/   
 	```
 if it is a file, then
+
 	```bash
 		filename
 	```
