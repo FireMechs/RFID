@@ -10,63 +10,53 @@ Follow the following link for instructions on installation of git in your system
 
 * 3.  But first let us set up your repo. 
 
-	* Open up you git bash: Windows (type 'git' in cortana search bar)
+	* a. Open up you git bash: Windows (type 'git' in cortana search bar)
 
-	* Navigate to your project directory using 
+	* b. Navigate to your project directory using 
+	```bash
+		cd directory Name #changing to the directory
+		cd .. # moving back to the previous directory(parent directory)
+		```
 
-```bash
-cd directory Name #changing to the directory
-```
+	* c. Initialize git in that repo
+	```bash
+		git init
+		```
 
-```bash
-cd .. # moving back to the previous directory(parent directory)
-```
+	* d. Add the remote github repo so you can commit files to it.
+	```bash 
+		git remote add origin https://github.com/FireMechs/RFID.git
+		``` 
 
-	* Initialize git in that repo
-
-```git
-git init
-```
-
-	* Add the remote github repo so you can commit files to it.
-
-```git 
-git remote add origin https://github.com/FireMechs/RFID.git
-``` 
-
-	* Start your project, add read and write files in your project repository using your preferred IDE or Editor.
+	* e. Start your project, add read and write files in your project repository using your preferred IDE or Editor.
 	
-	* Ready to send your work to the online repo?
+	* f. Ready to send your work to the online repo?
 
 Yes  but then not everything inside my directory is to be send. Then, fire up git bash and ignore this files ...
-
-```bash
-touch .gitignore # do this in your project repository
-```
-
+	```bash
+		touch .gitignore # do this in your project repository
+		```
 You will find this file '.gitignore' in your project repository. Edit it using any editor you like. If you don't want to send a certain directoty online the add the directory name to the  '.gitignore' file as follows
-
-```.gitignore
-sda_hymns/   
-```
-
+	```.gitignore
+		sda_hymns/   
+		```
 if it is a file, then
-```bash
-filename
-```
-	* What if some fellow has already uploaded his/her work before me. Oh, the rule is I need to have that update before I send my work.
+	```bash
+		filename
+		```
 
-```bash
-git pull 
-```
-	* Finally my files are ready and I am ready to upload
+	* g. What if some fellow has already uploaded his/her work before me. Oh, the rule is I need to have that update before I send my work.
+	```bash
+		git pull 
+		```
 
-```git
-git add . # prepares the files for staging
+	* h. Finally my files are ready and I am ready to upload
+	```bash
+		git add . # prepares the files for staging
 
-git commit -m "my commit message" # staging the files ready for upload
+		git commit -m "my commit message" # staging the files ready for upload
 
-git push -u origin master 
-```
+		git push -u origin master 
+		```
 
 Your will be asked for the username and password, and vuala! my work is online.
