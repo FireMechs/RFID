@@ -4,23 +4,7 @@
 
 Pin-layout (component side up)
 
-[                           RC522                                        ]
-[_______________________________________]
-   |         |          |           |          |         |         |         |
-SDA  SCK  MOSI  MISO  IRQ  GND  RST  3.3V
-
-
-Connect to Raspberry pin
-
-	pin	GPIO
-sda 	24	8		// chip select
-sck 	23	11		// clock
-mosi 	19	IO		// master out, slave in
-miso 	21 	9		// master in, slave out
-IRQ	--
-gnd 	20
-rst 	15	22		// hard reset
-3.3V	1
+![Connection: ]()
 
 
 ### Software setup on the Raspberry Pi.
@@ -110,9 +94,11 @@ Install latest from BCM2835 from :[BCM2835](http://www.airspayce.com/mikem/bcm28
 ```
 
 
-Run command as root :  ```bash
-				./rc522  -h
-                       ```
+Run command as root :  
+
+```bash
+	./rc522  -h
+```
 
 
 Note: The software was tested on Jessie Debian version with a Pi2 and Pi3. The GPIO section has not changed with the BCM2836, only the processor.
