@@ -4,7 +4,7 @@
 
 Pin-layout (component side up)
 
-![Connection: ]()
+![Connection: ](https://github.com/FireMechs/RFID-Database/blob/master/c_version/image/connection.png)
 
 
 ### Software setup on the Raspberry Pi.
