@@ -2,6 +2,13 @@
 
 __Disclaimer__: This can only run in a raspberry pi as some modules dictate so.
 
+## Getting started
+
+Make sure to have mfrc522 python package installed using the following command
+```bash
+	sudo pip3 install mfrc522
+```
+	
 ## Pins
 
 
