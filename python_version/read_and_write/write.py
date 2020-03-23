@@ -49,7 +49,7 @@ def get_data(): # get personal data
             break
 
     while True:
-        uid_tag2 = read_tag(1)
+        uid_tag2 = read_tag(2)
         if (check(5, uid_tag2)):
             print('Tag2 already in use')
             continue
