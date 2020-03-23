@@ -1,11 +1,26 @@
-## Python Implementation of the project
+# MFRC522-python
 
-__This source code can only run in Raspberry Pi__
+__Disclaimer__: This can only run in a raspberry pi as some modules dictate so.
 
-### Getting started
+## Pins
 
-Make sure to have mfrc522 python package installed using the following command
 
+| Name | Pin  | Pin name   |
+|------|-------|------------|
+| SDA  | 24    | GPIO8      |
+| SCK  | 23    | GPIO11     |
+| MOSI | 19    | GPIO10     |
+| MISO | 21    | GPIO9      |
+| IRQ  | None  | None       |
+| GND  | Any   | Any Ground |
+| RST  | 22    | 3V3        |
+| 3.3V | 1     | 3V3        |
+
+## Usage
+
+This can only in raspberry pi as some libraries dictate and also when you have all connection setup.
+
+Otherwise for now you can test one script
 ```bash
-	sudo pip3 install mfrc522
+	python test.py
 ```

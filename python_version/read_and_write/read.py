@@ -8,5 +8,6 @@ try:
     id,text = read_inst.read()
     print("ID: {} \n code: {}".format(id,text))
     # TODO -authentication of the data
+
 finally:
     GPIO.cleanup()
