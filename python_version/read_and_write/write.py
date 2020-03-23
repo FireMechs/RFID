@@ -18,7 +18,7 @@ def get_data(): # get personal data
 
     while True:
         serial_no  = input("Serial No: ")
-        if (check(0, serial_no)):
+        if (check(1, serial_no)):
             print('Serial_No already exist')
             continue
         else:
@@ -26,7 +26,7 @@ def get_data(): # get personal data
 
     while True:
         phone_no = input("Mobile Phone No: ")
-        if (check(0, phone_no)):
+        if (check(2, phone_no)):
             print('Mobile_No already exist')
             continue
         else:
@@ -34,7 +34,7 @@ def get_data(): # get personal data
 
     while True:
         secret_code = input("Secret Code: ")
-        if (check(0, secret_code)):
+        if (check(3, secret_code)):
             print('Secret Code already exist')
             continue
         else:
