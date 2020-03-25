@@ -38,22 +38,23 @@ def get_data():  # get personal data
     return data
 
 
-#param : num : 0(reg_no), 1(serial_no), 2(phone_no) ,3(secret_code),4(uid_tag1),5(uid_tag2)
+#param : num : 0(reg_no), 1(serial_no), 2(phone_no), 3(secret_code), 4(uid_tag1), 5(uid_tag2)
 def check(num , item):
     flag = False
-    conn = sqlite3.connect('data.db')
-    with conn:
-        cur = conn.cursor()
-        cur.execute('SELECT * FROM t_data')
-        while True:
-            row = cur.fetchone()
-            if row == None:
-                break
-            elif row[num] == item:
-                flag = True
+    def create_connection(data_file):
+        conn = sqlite3.connect(data_file)
+        with conn:
+            cur = conn.cursor()
+            cur.execute('SELECT * FROM t_data')
+            while True:
+                row = cur.fetchone()
+                if row == None:
+                    break
+                elif row[num] == item:
+                    flag = True
 
-    conn.close()
-    return flag
+        conn.close()
+        return flag
 
 data = get_data()
 print(data)

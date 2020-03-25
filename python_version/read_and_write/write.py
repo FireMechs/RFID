@@ -56,7 +56,7 @@ def get_data(): # get personal data
         else:
             break
 
-    data.extend([reg_num,serial_no,phone_no,secret_code,uid_tag1,uid_tag2])
+    data.extend([reg_num, serial_no, phone_no, secret_code, uid_tag1, uid_tag2])
     return data
 
 def write(text):
@@ -69,19 +69,20 @@ def write(text):
 #param : num : 0(reg_no), 1(serial_no), 2(phone_no) ,3(secret_code),4(uid_tag1),5(uid_tag2)
 def check(num , item):
     flag = False
-    conn = sqlite3.connect('data.db')
-    with conn:
-        cur = conn.cursor()
-        cur.execute('SELECT * FROM t_data')
-        while True:
-            row = cur.fetchone()
-            if row == None:
-                break
-            elif row[num] == item:
-                flag = True
+    def create_connection(data_file):
+        conn = sqlite3.connect(data_file)
+        with conn:
+            cur = conn.cursor()
+            cur.execute('SELECT * FROM t_data')
+            while True:
+                row = cur.fetchone()
+                if row == None:
+                    break
+                elif row[num] == item:
+                    flag = True
 
-    conn.close()
-    return flag
+        conn.close()
+        return flag
 
 def read_tag(num):
     print(f'Place your card {num} to get uid...')
@@ -91,9 +92,9 @@ def read_tag(num):
 def insert(data):
     global con
     try:
-        con = sqlite3.connect('data.db')
+        con = sqlite3.connect('data_file.db')
         cur = con.cursor()
-        cur.executemany('INSERT INTO t_data VALUES (?,?,?,?,?,?)',data)
+        cur.executemany('INSERT INTO t_data VALUES (?,?,?,?,?,?)', data)
         con.commit()
     except sqlite3.Error as e:
         if con:
