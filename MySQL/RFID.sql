@@ -27,9 +27,13 @@ CREATE TABLE `Digital_Data` (
   `RFID_Card` char(100) NOT NULL,
   `Laptop_Make` char(10) NOT NULL,
   `Reg_Number` char(16) NOT NULL,
+<<<<<<< HEAD
   UNIQUE KEY `UC_Digital` (`RFID_Key`,`RFID_Card`),
   KEY `Reg_Number` (`Reg_Number`),
   CONSTRAINT `Digital_Data_ibfk_1` FOREIGN KEY (`Reg_Number`) REFERENCES `Personal_Data` (`Reg_Number`)
+=======
+  PRIMARY KEY (`RFID_Key`,`RFID_Card`)
+>>>>>>> e0837f7488066df51a2e1ec53ffb678337ee4f3d
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -53,8 +57,12 @@ CREATE TABLE `Personal_Data` (
   `Name` char(20) NOT NULL,
   `Phone_Number` int(10) NOT NULL,
   `Reg_Number` char(16) NOT NULL,
+<<<<<<< HEAD
   PRIMARY KEY (`Reg_Number`),
   UNIQUE KEY `Phone_Number` (`Phone_Number`)
+=======
+  PRIMARY KEY (`Phone_Number`,`Reg_Number`)
+>>>>>>> e0837f7488066df51a2e1ec53ffb678337ee4f3d
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -76,4 +84,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2020-03-28 12:28:53
+=======
+-- Dump completed on 2020-03-23 20:39:45
+>>>>>>> e0837f7488066df51a2e1ec53ffb678337ee4f3d
