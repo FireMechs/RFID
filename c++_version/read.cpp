@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "RPi-RFID/MFRC522.h" // contains  a class
+#include "MFRC522.h"
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int main()
                   *  */
     mfr.PCD_Init(); // Initializes the MFRC522 chip.
     // always look for new cards
-    while(1)
+    while(true)
     {
         if(!mfr.PICC_IsNewCardPresent()) // checks for a new card
         {
