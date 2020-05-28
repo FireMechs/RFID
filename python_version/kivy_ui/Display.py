@@ -1,6 +1,9 @@
 from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.lang import Builder
+from kivy.core.window import Window
+
+Window.clearcolor = (0.4,0.3,0.76,1)
 
 Builder.load_file("bios.kv")
 Builder.load_file("verfs.kv")
