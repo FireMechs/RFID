@@ -1,12 +1,20 @@
 from kivy.uix.gridlayout import GridLayout
 from kivy.clock import Clock
+from sandbox import SandBox
+from verfs import Verfs
 
 class Bios(GridLayout):
     def __init__(self, **kwargs):
+        self.data = []
         Clock.schedule_interval(self.on_detected, 0.5)
         super(Bios, self).__init__(**kwargs)
     def on_detected(self, dt):
-        self.ids.name.text = 'Eric Kipngeno Koech'
-        self.ids.reg_no.text = 'ENM221-0068/2017'
-        self.ids.tag_data.text = 'Dummy Text'
-        self.ids.serial_no.text = '5CB2032SYK' + str(dt)
+        sd = SandBox()
+        vf = Verfs()
+        self.data = sd.handle_data()
+        if self.data[0] == sd.No_data:
+            vf.setText(sd.No_data)
+        else:
+            self.ids.reg_no.text = self.data[0]
+            self.ids.serial_no.text = self.data[1]
+            self.ids.phone_no.text = str(self.data[2])

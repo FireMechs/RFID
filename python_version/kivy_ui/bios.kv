@@ -1,23 +1,24 @@
 #:import bios bios
+<DataLabel@Label>:
+    font_size: self.width/8
+    bold: True
 <Bios>:
     cols: 2
-    Label:
-        text: 'Name: '
-    Label:
-        id: name
-        text: ''
-    Label:
+    DataLabel:
         text: 'Reg. No: '
     Label:
+        font_size:self.width/10
         id: reg_no
         text: ''
-    Label:
-        text: 'Tag Data: '
-    Label:
-        id: tag_data
-        text: ''
-    Label:
+    DataLabel:
         text: 'Serial No: '
     Label:
+        font_size:self.width/10
         id: serial_no
+        text: ''
+    DataLabel:
+        text: 'Phone No: '
+    Label:
+        font_size:self.width/10
+        id: phone_no
         text: ''
