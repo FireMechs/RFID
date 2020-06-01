@@ -14,7 +14,7 @@ Make sure to have mfrc522 python package installed using the following command
 
 | Name | Pin  | Pin name   |
 |------|-------|------------|
-| SDA  | 24    | GPIO8      |
+| SDA  | 24    | GPIO8      |	`
 | SCK  | 23    | GPIO11     |
 | MOSI | 19    | GPIO10     |
 | MISO | 21    | GPIO9      |
